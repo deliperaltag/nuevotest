@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="probandomunit-test-suite.xml" />
+	<munit:test name="probandomunit-test-suite-probandomunitFlowTest" doc:id="9a777870-852e-47d5-a929-137d3c935e9c" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to probandomunitFlow" doc:id="947fac53-8d87-4f01-820b-bb7deb318c7f" name="probandomunitFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-equals doc:name="Assert equals" doc:id="18829dbb-94b1-4d1e-9a0f-011608f1f055" actual="#[payload]" expected="#['hola']" message="probando"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>

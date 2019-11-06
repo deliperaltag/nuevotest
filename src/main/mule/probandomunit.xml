@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="d25ddf23-778e-42fa-9913-3ce5b63b2a76" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="probandomunitFlow" doc:id="8996cf91-0adb-41d6-a00b-6fd911011335" >
+		<http:listener doc:name="Listener" doc:id="b4ee504e-cd85-4e86-8e37-fec2779be356" config-ref="HTTP_Listener_config" path="/probando"/>
+		<set-payload value="#['hola']" doc:name="Set Payload" doc:id="7776e643-f24f-4f71-bf5d-72a868f99b18" />
+	</flow>
+</mule>
