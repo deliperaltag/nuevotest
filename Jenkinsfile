@@ -11,20 +11,13 @@ pipeline {
 			        alwaysLinkToLastBuild: false,
 			        keepAll: true,
 			        reportDir: 'coverage',
-			        reportFiles: 'index.html',
-			        reportName: "RCov Report"
+			        reportFiles: 'probandomunit-report.html',
+			        reportName: "probandomunit-report"
 			      ])
 
- 				 }
+ 			 }
         }
-    stage('Test') {
-            steps {
-            	sh './gradlew check'
-                echo 'Testing..'
-            }
-     }
-    stages {    
-        stage('Deploy') {
+     stage('Deploy') {
             steps {
             	bat 'mvn clean package deploy -DmuleDeploy'
                 echo 'Deploying....'
