@@ -32,7 +32,7 @@
 						<muleVersion>4.2.1</muleVersion>
 						<username>georgeaquinohuaman</username>
 						<password>Mulesfoft2019</password>
-						<applicationName>pruebita</applicationName>
+						<applicationName>probandomunit</applicationName>
 						<environment>Sandbox</environment>
 						<properties>
 							<region>sa-east-1</region>
@@ -124,5 +124,4 @@
 			<url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
 		</pluginRepository>
 	</pluginRepositories>
-
 </project>
